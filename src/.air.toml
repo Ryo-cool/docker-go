@@ -1,6 +1,13 @@
 root = "."
 tmp_dir = "tmp"
+[watcher]
+type = "inotify"
 
+[watcher.inotify]
+debounce = "100ms"
+
+[service.main]
+command = "go run main.go"
 [build]
   bin = "./tmp/main"
   cmd = "go build -o ./tmp/main ."

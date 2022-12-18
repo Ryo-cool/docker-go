@@ -1,6 +1,6 @@
-FROM golang:1.16-alpine
+FROM golang:1.19-alpine
 
-WORKDIR /go/src
+WORKDIR ./src
 COPY ./src .
 
 RUN apk upgrade --update && \
